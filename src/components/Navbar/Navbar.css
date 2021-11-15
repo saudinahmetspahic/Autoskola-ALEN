@@ -74,6 +74,10 @@
     border-radius: 10px 50%;
 }
 
+.navbar__stavka__image{
+    margin-right: 100px;
+}
+
 .navbar__stavka{
     position: relative;
     max-height: 100%;

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Kontakt.css'
 
 function Kontakt() {
     return (
-        <div>
+        <div className="kontakt">
             
         </div>
     )

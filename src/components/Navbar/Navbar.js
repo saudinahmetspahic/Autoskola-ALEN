@@ -10,8 +10,8 @@ import logo from '../../images/logo.png';
 
 function Navbar() {
 
-    const alen_fb = "https://bs-ba.facebook.com/alen.ahmetspahic.31";
-    const alen_ig = "https://bs-ba.facebook.com/alen.ahmetspahic.31";
+    const alen_fb = "https://www.facebook.com/Autoskola-ALEN-106837360920628";
+    const alen_ig = "https://www.instagram.com/autoskolaalen/";
 
     return (
         <div className="navbar">
@@ -33,7 +33,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="second">
-                <Link className="navbar__stavka" to="/"><img className="navbar__logo" src={logo} alt="logo" /></Link>
+                <Link className="navbar__stavka__image" to="/"><img className="navbar__logo" src={logo} alt="logo" /></Link>
                 <Link className="navbar__stavka" to="/">Pocetna</Link>
                 <Link className="navbar__stavka" to="/autoskola">Autoškola</Link>
                 <Link className="navbar__stavka" to="/instruktor">Instruktor</Link>

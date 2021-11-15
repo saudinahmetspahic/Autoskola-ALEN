@@ -22,8 +22,8 @@ import road_bg from '../../images/road_bg.png'
 
 function Pocetna() {
 
-    const alen_fb = "https://bs-ba.facebook.com/alen.ahmetspahic.31";
-    const alen_ig = "https://bs-ba.facebook.com/alen.ahmetspahic.31";
+    const alen_fb = "https://www.facebook.com/Autoskola-ALEN-106837360920628";
+    const alen_ig = "https://www.instagram.com/autoskolaalen/";
 
     return (
         <div className="pocetna">
