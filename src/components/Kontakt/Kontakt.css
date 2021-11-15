@@ -1,5 +1,96 @@
 .kontakt{
-    width: 100%;
-    height: 80vh;
+    min-height: calc(100vh - 150px);
+    height: fit-content;
     background: white;
+}
+
+.kontakt__header{
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+
+.kontakt__header__image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.kontakt__header__description{
+    position: absolute;
+    left: calc(50% - 300px);
+    top: calc(50% - 50px);
+    width: 600px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    font-family: 'Barlow', sans-serif;
+}
+
+.kontakt__header__description::before{
+    content: '';
+    display: block;
+    width: 250px;
+    height: 2px;
+    margin: auto;
+    background: #F87D09;
+    margin-bottom: 20px;
+
+}
+
+.kontakt__content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.kontakt__obrazac{
+    max-width: 700px;
+    padding: 100px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.kotakt__obrazac__header{
+    color: #F87D09;
+    margin-bottom: 10px;
+}
+
+.kotakt__obrazac__description{
+    color: rgb(82, 82, 82);
+    font-size: 15px;
+    line-height: 17px;
+    margin-bottom: 5px;
+}
+
+.kontakt__obrazac__form{
+    display: flex;
+    flex-wrap: wrap;
+}   
+
+.kontakt__obrazac__form__input{
+    padding: 5px 10px;
+    border-color: 1px solid rgb(170, 170, 170);
+    outline: none;
+    margin: 5px;
+    font-size: 18px;
+    width: calc(50% - 10px);
+    color: gray;
+}
+.kontakt__obrazac__form__input::placeholder{
+    color: gray;
+}
+
+.kontakt__obrazac__form__input--textarea{
+    width: 100% !important;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.kontakt__obrazac__form__btn{
+    margin: 25px auto;
+    padding: 5px 15px;
+    font-size: 25px;
 }
