@@ -1,0 +1,30 @@
+.contact{
+    width: 250px;
+    max-height: 500px;
+    padding: 10px;
+
+}
+
+.contact__title{
+    font-size: 19px;
+    color: rgb(139, 139, 139);
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact__title::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: yellow;
+    margin: 10px 0px;
+}
+
+.contact__content{
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+

@@ -1,0 +1,128 @@
+.navbar{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+}
+
+.first{
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.first__section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.first__section__p{
+    border-right: 1px solid gray;
+    padding-right: 20px;
+}
+
+.first__section__col{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 20px;
+    gap: 10px;
+}
+
+.first__section__col:first-of-type{
+    border-right: 1px solid gray;
+}
+
+.first__section__col__icon{
+    color: rgb(236, 233, 14);
+}
+
+.first__section__col__p{
+    line-height: 10px;
+}
+
+.first__section__soc__icon{
+    cursor: pointer;
+    margin: 0px 10px;
+    transition: 0.5s;
+}
+.first__section__soc__icon:hover{
+    color: rgb(184, 184, 184);
+    transform: scale(1.5);
+    
+}
+
+.second{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logo{
+    max-width: 100px;
+    max-height: 90px;
+    object-fit: contain;
+    flex: 1;
+    border-radius: 10px 50%;
+}
+
+.navbar__stavka__image{
+    margin-right: 100px;
+}
+
+.navbar__stavka{
+    position: relative;
+    max-height: 100%;
+    padding: 5px;
+    cursor: pointer;
+    color: rgb(32, 113, 206);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: 0.5s;
+    margin-left: 20px;
+}
+
+.navbar__stavka:first-of-type{
+    margin-right: 100px;
+}
+
+.navbar__stavka:hover{
+    color: rgb(19, 77, 143);
+}
+
+.navbar__stavka::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(19, 77, 143);    
+
+}
+
+.navbar__stavka:hover::after{
+    animation: stavka-animation;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes stavka-animation {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+

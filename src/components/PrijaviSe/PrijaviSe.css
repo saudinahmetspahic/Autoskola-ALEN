@@ -1,0 +1,132 @@
+.prijavise{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(48, 91, 211); */
+    background: url('../../images/logo.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    z-index: 1;
+}
+
+.init{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #d47e2dde;
+    padding: 100px;
+}
+
+.prijavise::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.3);
+    z-index: -1;
+}
+
+.prijavise__header{
+    font-size: 2cm;
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0px 0px 5px rgba(248, 248, 248, 0.2);
+    text-align: center;
+    margin: auto;
+}
+
+.prijavise__header::after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 150px;
+    background: white;
+    margin: 20px auto;
+}
+
+.prijavise__description{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+/* ------- */
+
+.prijavise__form{
+   max-width: 500px;
+   margin: 5px auto;
+}
+
+.prijavise__form__label{
+    display: block;
+    color: rgb(219, 217, 217);
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.prijavise__form__input{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    min-height: 30px;
+    padding: 10px 15px;
+    outline: none;
+    border: 0px;
+    margin: 5px 0px 15px 0px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.prijavise__form__input::placeholder{
+    color:  white;
+}
+
+.prijavise__checkbox{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.prijavise__form__checkboxs{
+    display: flex;
+    gap: 5px;
+}
+
+.prijavise__kategorija{
+    color: white;
+    margin: 0px 10px;
+    font-size: 20px;
+}
+
+.prijavise__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px;
+}
+
+.prijavise__btn{
+    margin-top: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 20px 30px;
+}
+
+
