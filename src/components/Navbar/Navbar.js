@@ -7,7 +7,6 @@ import { ImFacebook } from 'react-icons/im'
 import { ImInstagram } from 'react-icons/im'
 
 import logo from '../../images/logo.png';
-import meni from '../../images/meni_image.png';
 import { ImMenu3 } from 'react-icons/im'
 
 function Navbar() {
