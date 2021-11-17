@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { AiFillMail } from 'react-icons/ai'
@@ -7,11 +7,33 @@ import { ImFacebook } from 'react-icons/im'
 import { ImInstagram } from 'react-icons/im'
 
 import logo from '../../images/logo.png';
+import meni from '../../images/meni_image.png';
+import { ImMenu3 } from 'react-icons/im'
 
 function Navbar() {
+    const [menuOpened, setMenuOpened] = useState(false)
+    const menuRef = useRef()
 
     const alen_fb = "https://www.facebook.com/Autoskola-ALEN-106837360920628";
     const alen_ig = "https://www.instagram.com/autoskolaalen/";
+
+
+    const openMobMenu = () => {
+        if (!menuOpened) {
+            menuRef.current.classList.add("openedMenu");
+            setMenuOpened(true);
+        }
+        else {
+            closeMobMenu();
+        }
+    }
+
+    const closeMobMenu = () => {
+        if (!menuOpened) return;
+        menuRef.current.classList.remove("openedMenu");
+        setMenuOpened(false);
+    }
+
 
     return (
         <div className="navbar">
@@ -32,13 +54,17 @@ function Navbar() {
                     <a href={alen_ig} target="_blank" rel="noreferrer"><ImInstagram className="first__section__soc__icon" /></a>
                 </div>
             </div>
-            <div className="second">
+            <div ref={menuRef} className="second">
                 <Link className="navbar__stavka__image" to="/"><img className="navbar__logo" src={logo} alt="logo" /></Link>
-                <Link className="navbar__stavka" to="/">Pocetna</Link>
-                <Link className="navbar__stavka" to="/autoskola">Autoškola</Link>
-                <Link className="navbar__stavka" to="/instruktor">Instruktor</Link>
-                <Link className="navbar__stavka" to="/testovi">Testovi</Link>
-                <Link className="navbar__stavka" to="/kontakt">Kontakt</Link>
+                <div className="navbar__stavke">
+                    <Link onClick={closeMobMenu} className="navbar__stavka" to="/">Pocetna</Link>
+                    <Link onClick={closeMobMenu} className="navbar__stavka" to="/autoskola">Autoškola</Link>
+                    <Link onClick={closeMobMenu} className="navbar__stavka" to="/instruktor">Instruktor</Link>
+                    <Link onClick={closeMobMenu} className="navbar__stavka" to="/testovi">Testovi</Link>
+                    <Link onClick={closeMobMenu} className="navbar__stavka" to="/kontakt">Kontakt</Link>
+                </div>
+                <ImMenu3 onClick={openMobMenu} className="meni" />
+                {/* <img ref={menuIconRef} onClick={openMobMenu} className="meni" src={meni} alt="" /> */}
             </div>
         </div>
     )

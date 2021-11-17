@@ -106,11 +106,24 @@
 .prijavise__form__checkboxs{
     display: flex;
     gap: 5px;
+    margin: 5px 20px;
+}
+
+.prijavise__checkbox{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.prijavise__kategorija__wrapper{
+    width: fit-content;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .prijavise__kategorija{
     color: white;
-    margin: 0px 10px;
     font-size: 20px;
 }
 
@@ -129,4 +142,27 @@
     padding: 20px 30px;
 }
 
+@media screen and (max-width: 750px) {
+    .init{
+        padding: 20px 5px;
+    }
 
+    .prijavise__header{
+        font-size: 3rem;
+    }
+
+    .prijavise__form{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .prijavise__form__checkboxs{
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .prijavise__buttons{
+        gap: 25px;
+    }
+}

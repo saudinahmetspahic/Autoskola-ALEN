@@ -19,7 +19,6 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
-        {/* <Pocetna></Pocetna> */}
         <Routes>
             <Route path="/autoskola" element={<Autoskola />}></Route>
             <Route path="/instruktor" element={<Instruktor />}></Route>

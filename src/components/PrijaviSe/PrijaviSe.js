@@ -37,49 +37,19 @@ function PrijaviSe() {
                         <input className="prijavise__form__input" type="date" name="datumrodjenja" />
 
                         <label className="prijavise__form__label" htmlFor="zakategoriju">Odaberite kategoriju za koju polažete</label>
-                        {/* <label className="prijavise__kategorija" htmlFor="B">B</label><input type="checkbox" name="B" id="B" /> */}
-                        <label class="container">B
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                        </label>
+                        <div className="prijavise__form__checkboxs">
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="B">B</label><input type="checkbox" className="prijavise__checkbox" name="B" id="B" /></div>
+                        </div>
 
                         <label className="prijavise__form__label" htmlFor="posjedujekategoriju">Odaberite kategorije koje već posjedujete (ukoliko posjedujete)</label>
-                        {/* <label className="prijavise__kategorija" htmlFor="A">A</label><input className="prijavise__checkbox" type="checkbox" name="A" id="A" />
-                        <label className="prijavise__kategorija" htmlFor="B">B</label><input className="prijavise__checkbox" type="checkbox" name="B" id="B" />
-                        <label className="prijavise__kategorija" htmlFor="C1">C1</label><input className="prijavise__checkbox" type="checkbox" name="C1" id="C1" />
-                        <label className="prijavise__kategorija" htmlFor="C">C</label><input className="prijavise__checkbox" type="checkbox" name="C" id="C" />
-                        <label className="prijavise__kategorija" htmlFor="CE">CE</label><input className="prijavise__checkbox" type="checkbox" name="CE" id="CE" />
-                        <label className="prijavise__kategorija" htmlFor="D">D</label><input className="prijavise__checkbox" type="checkbox" name="D" id="D" />
-                        <label className="prijavise__kategorija" htmlFor="DE">DE</label><input className="prijavise__checkbox" type="checkbox" name="DE" id="DE" /> */}
                         <div className="prijavise__form__checkboxs">
-                            <label class="container">A
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">B
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">C1
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">C
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">CE
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">D
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">DE
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                            </label>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="A">A</label><input className="prijavise__checkbox" type="checkbox" name="A" id="A" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="B">B</label><input className="prijavise__checkbox" type="checkbox" name="B" id="B" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="C1">C1</label><input className="prijavise__checkbox" type="checkbox" name="C1" id="C1" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="C">C</label><input className="prijavise__checkbox" type="checkbox" name="C" id="C" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="CE">CE</label><input className="prijavise__checkbox" type="checkbox" name="CE" id="CE" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="D">D</label><input className="prijavise__checkbox" type="checkbox" name="D" id="D" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="DE">DE</label><input className="prijavise__checkbox" type="checkbox" name="DE" id="DE" /></div>
                         </div>
 
                         <label className="prijavise__form__label" htmlFor="opis">Dodajte opis (ukoliko je potrebno)</label>

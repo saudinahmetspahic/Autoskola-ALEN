@@ -58,3 +58,38 @@
     color: rgb(116, 114, 114);
     max-width: 450px;
 }
+
+@media screen and (max-width: 700px) {
+    .autoskola__row{
+        flex-direction: column;
+        gap: 5px;
+        padding: 3px 15px;
+    }
+    .autoskola__row:nth-of-type(1){
+        flex-direction: column-reverse;
+    }
+
+    .autoskola__col{
+        width: 100%;
+        max-width: unset;
+        gap: 5px;
+        padding: 10px 0px;
+    }
+
+    .autoskola__image{
+        max-width: 100%;
+        margin: 5px 0px;
+    }
+
+    .autoskola__header__small{
+        text-align: center;
+    }
+
+    .autoskola__header__small::after{
+        margin: 10px auto;
+    }
+
+    .autoskola__header{
+        text-align: center;
+    }
+}

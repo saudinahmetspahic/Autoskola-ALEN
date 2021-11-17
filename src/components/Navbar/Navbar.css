@@ -60,10 +60,15 @@
 }
 
 .second{
+    position: relative;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.second .meni{
+    display: none;
 }
 
 .navbar__logo{
@@ -75,7 +80,7 @@
 }
 
 .navbar__stavka__image{
-    margin-right: 100px;
+    margin-right: 70px;
 }
 
 .navbar__stavka{
@@ -88,10 +93,6 @@
     font-size: 18px;
     transition: 0.5s;
     margin-left: 20px;
-}
-
-.navbar__stavka:first-of-type{
-    margin-right: 100px;
 }
 
 .navbar__stavka:hover{
@@ -117,6 +118,65 @@
     animation-timing-function: ease-in-out;
 }
 
+/* ---- mob menu ----- */
+.openedMenu *{
+    transition: .5s;
+}
+.openedMenu .navbar__stavke{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80, 80, 0.9);
+    font-size: 35px;
+    text-align: center;
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.openedMenu .navbar__stavka{
+    display: block;
+    width: 100%;
+    z-index: 300000;
+    padding: 20px 5px;
+    margin: 0px;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+.openedMenu .navbar__stavka:hover::after{
+    animation: none;
+}
+.openedMenu .meni{
+    z-index: 1000000;
+    position: fixed !important;
+    top: 5vh !important;
+    left: calc(50% - 20px) !important;
+    width: 50px !important;
+    height: 50px !important;
+    color: white;
+}
+/* .openedMenu .navbar__stavka:nth-of-type(1){
+    top: 10vh;
+}
+.openedMenu .navbar__stavka:nth-of-type(2){
+    top: 25vh;
+}
+.openedMenu .navbar__stavka:nth-of-type(3){
+    top: 50vh;
+}
+.openedMenu .navbar__stavka:nth-of-type(4){
+    top: 65vh;
+}
+.openedMenu .navbar__stavka:nth-of-type(5){
+    top: 80vh;
+} */
+/* --------- */
+
 @keyframes stavka-animation {
     from{
         width: 0%;
@@ -126,3 +186,47 @@
     }
 }
 
+
+@media screen and (max-width: 700px) {
+    .first{
+        flex-direction: column-reverse;
+    }
+
+    .first__section__col__p{
+        line-height: 13px;
+        font-size: 0.7rem;
+    }
+
+    .second{
+        justify-content: flex-start;
+        padding: 5px;
+    }
+
+    .navbar__logo{
+        max-width: 50px;
+        max-height: 50px;
+        margin-left: 50px;
+    }
+
+    .navbar__stavka{
+        display: none;
+    }
+
+    .second .meni{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: calc(50% - 25px);
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .navbar__stavka__image{
+        margin-right: 0px;
+    }
+
+
+    
+}
