@@ -33,10 +33,10 @@ function PrijaviSe() {
         setPolazeZa([{ kategorija: jelPolaze }, ...polazeZa]);
     }
     const updateImaPolozene = (e, kategorija) => {
-        var jelImaPolozeno = e.target.checked;
+        //var jelImaPolozeno = e.target.checked;
         //setImaPolozeno((trenutno) => [{[kategorija]: jelImaPolozeno}, ...trenutno]);
         var trazenaKategorija = polazeZa.find(f => [kategorija] === f);
-        
+        setImaPolozeno([]);
 
         console.log(trazenaKategorija);
     }
