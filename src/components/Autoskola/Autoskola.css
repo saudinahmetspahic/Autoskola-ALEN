@@ -92,4 +92,10 @@
     .autoskola__header{
         text-align: center;
     }
+
+    .autoskola__description{
+        text-align: justify;
+        word-break: break-all;
+        -ms-word-break: break-all;
+    }
 }

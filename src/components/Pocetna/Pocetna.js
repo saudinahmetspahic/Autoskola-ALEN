@@ -30,8 +30,7 @@ function Pocetna() {
             <section className="pocetna__section">
                 <img className="pocetna__section__img" src={main} alt="" />
                 <div className="pocetna__section__content pocetna__section__content--dark--bg">
-                    <p className="pocetna__section__content__p">Kvalitetna obuka za B kategoriju</p>
-                    <p className="pocetna__section__content__p">ALEN AUTOŠKOLA</p>
+                    <p className="pocetna__section__content__p">AUTOŠKOLA ALEN</p>
                     <p className="pocetna__section__content__p">Prijavite se na brz i jednostavan način</p>
                     <button className="btn pocetna__section__content__btn">Prijavi se</button>
                 </div>
@@ -105,8 +104,7 @@ function Pocetna() {
                         </div>
                         <div className="pocetna__section__content__col">
                             <ContactSection title="Lokacija">
-                                <p className="align__info"><ImLocation />Zenica (BiH)</p>
-                                <p className="align__info"><ImLocation />Vranduk (BiH)</p>
+                                <p className="align__info"><ImLocation />Zenica, Sarajevska 75</p>
                             </ContactSection>
                         </div>
                         <div className="pocetna__section__content__col">

@@ -71,6 +71,7 @@
 .instruktor__description{
     max-width: 500px;
     color: rgb(90, 90, 90);
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .instruktor__vozilo{
