@@ -1,15 +1,9 @@
 import React, { useState } from 'react'
 import './PrijaviSe.css'
 
-const kategorijeDefault = [
-    {A: false},
-    {B: false},
-    {C1: false},
-    {C: false},
-    {CE: false},
-    {D: false},
-    {DE: false}
-];
+import { send } from 'emailjs-com';
+
+const kategorijeDefault = [];
 
 function PrijaviSe() {
     const [init, setInit] = useState(true)
@@ -22,29 +16,47 @@ function PrijaviSe() {
     const [polazeZa, setPolazeZa] = useState(kategorijeDefault)
     const [imaPolozeno, setImaPolozeno] = useState(kategorijeDefault)
 
-  
+
 
     const initToggle = () => {
         setInit(!init);
     }
 
-    const updatePolazeZa = (e, kategorija) => {
-        var jelPolaze = e.target.checked;
-        setPolazeZa([{ kategorija: jelPolaze }, ...polazeZa]);
-    }
-    const updateImaPolozene = (e, kategorija) => {
-        //var jelImaPolozeno = e.target.checked;
-        //setImaPolozeno((trenutno) => [{[kategorija]: jelImaPolozeno}, ...trenutno]);
-        var trazenaKategorija = polazeZa.find(f => [kategorija] === f);
-        setImaPolozeno([]);
-
-        console.log(trazenaKategorija);
-    }
-
     const posaljiPrijavu = (e) => {
         e.preventDefault();
-        alert(imePrezime);
-        console.log("Poslije slanja forme", imaPolozeno);
+        var kategorije_polozenoIma = "";
+        imaPolozeno.forEach(ip => kategorije_polozenoIma += ' ' + ip);
+        kategorije_polozenoIma = kategorije_polozenoIma.trimStart();
+        var kategorije_polazeZa = "";
+        polazeZa.forEach(pz => kategorije_polazeZa += ' ' + pz);
+        kategorije_polazeZa = kategorije_polazeZa.trimStart();
+        const templateParams = {
+            korisnik_ime: imePrezime,
+            korisnik_email: email,
+            korisnik_telefon: telefon,
+            korisnik_mjestostanovanja: mjestoStanovanja,
+            korisnik_datumrodjenja: datumRodjenja.toString("dd mmm yyyy"),
+            korisnik_imapolozeno: kategorije_polozenoIma,
+            korisnik_polazeza: kategorije_polazeZa,
+            korisnik_opis: opis
+        };
+        send('service_apagqtv', 'template_tzni1d1', templateParams, 'user_YE5AldepJRXipFb0L8pNY');
+    }
+
+    const PostaviKategorijeZaPolaganje = (kategorija, vrijednost) => {
+        var newObj = polazeZa.filter(f => f !== kategorija);
+        if (vrijednost === true) {
+            newObj.push(kategorija);
+        }
+        setPolazeZa(newObj);
+    }
+
+    const PostaviKategorijeKandidatPosjeduje = (kategorija, vrijednost) => {
+        var newObj = imaPolozeno.filter(f => f !== kategorija);
+        if (vrijednost === true) {
+            newObj.push(kategorija);
+        }
+        setImaPolozeno(newObj);
     }
 
     return (
@@ -76,18 +88,18 @@ function PrijaviSe() {
 
                         <label className="prijavise__form__label" htmlFor="zakategoriju">Odaberite kategoriju za koju polažete</label>
                         <div className="prijavise__form__checkboxs">
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="B">B</label><input onChange={(e) => updatePolazeZa(e, "B")} value={polazeZa["B"]} type="checkbox" className="prijavise__checkbox" name="B" id="B" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="B">B</label><input onChange={(e) => PostaviKategorijeZaPolaganje('B', e.target.checked)} type="checkbox" className="prijavise__checkbox" name="B" id="B" /></div>
+                            {/* test <input onChange={(e) => PostaviKategorijeZaPolaganje('B', e.target.checked)} value='' type="checkbox" className="prijavise__checkbox" name="B" id="B" /> */}
                         </div>
-
                         <label className="prijavise__form__label" htmlFor="posjedujekategoriju">Odaberite kategorije koje već posjedujete (ukoliko posjedujete)</label>
                         <div className="prijavise__form__checkboxs">
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="A">A</label><input onChange={(e) => updateImaPolozene(e, "A")} value={imaPolozeno["A"]} className="prijavise__checkbox" type="checkbox" name="A" id="A" /></div>
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="B">B</label><input onChange={(e) => updateImaPolozene(e, "B")} value={imaPolozeno["B"]} className="prijavise__checkbox" type="checkbox" name="B" id="B" /></div>
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="C1">C1</label><input onChange={(e) => updateImaPolozene(e, "C1")} value={imaPolozeno["C1"]} className="prijavise__checkbox" type="checkbox" name="C1" id="C1" /></div>
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="C">C</label><input onChange={(e) => updateImaPolozene(e, "C")} value={imaPolozeno["C"]} className="prijavise__checkbox" type="checkbox" name="C" id="C" /></div>
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="CE">CE</label><input onChange={(e) => updateImaPolozene(e, "CE")} value={imaPolozeno["CE"]} className="prijavise__checkbox" type="checkbox" name="CE" id="CE" /></div>
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="D">D</label><input onChange={(e) => updateImaPolozene(e, "D")} value={imaPolozeno["D"]} className="prijavise__checkbox" type="checkbox" name="D" id="D" /></div>
-                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="DE">DE</label><input onChange={(e) => updateImaPolozene(e, "DE")} value={imaPolozeno["DE"]} className="prijavise__checkbox" type="checkbox" name="DE" id="DE" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="A">A</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('A', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="A" id="A" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="B">B</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('B', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="B" id="B" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="C1">C1</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('C1', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="C1" id="C1" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="C">C</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('C', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="C" id="C" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="CE">CE</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('CE', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="CE" id="CE" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="D">D</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('D', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="D" id="D" /></div>
+                            <div className="prijavise__kategorija__wrapper"><label className="prijavise__kategorija" htmlFor="DE">DE</label><input onChange={(e) => PostaviKategorijeKandidatPosjeduje('DE', e.target.checked)} className="prijavise__checkbox" type="checkbox" name="DE" id="DE" /></div>
                         </div>
 
                         <label className="prijavise__form__label" htmlFor="opis">Dodajte opis (ukoliko je potrebno)</label>

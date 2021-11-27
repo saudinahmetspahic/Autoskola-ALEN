@@ -4,6 +4,125 @@
     background-color: white;
 }
 
+.autoskola__header{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.autoskola__header__img{
+    display: block;
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: auto;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #0B1131;
+}
+
+.autoskola__header__description{
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3cm;
+    color: #0B1131;
+}
+
+.autoskola__header__arrow{
+    display: block;
+    margin: 10px auto;
+    font-size: 2cm;
+    color: #0B1131;
+    animation: autoskola_arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes autoskola_arrow {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-15px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    75%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.autoskola__content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.autoskola__content__images{
+    position: relative;
+    width: 50%;
+    margin: 50px auto;
+    height: 400px;
+    display: block;
+    padding: 50px 10px;
+}
+
+.autoskola__content__img{
+    width: 60%;
+    object-fit: contain;
+    padding: 0px !important;
+}
+.autoskola__content__img:first-of-type{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
+}
+.autoskola__content__img:nth-of-type(2){
+    position: absolute;
+    left: 40%;
+    bottom: 0px;
+    /* border-bottom: 10px solid #0B1131;
+    border-left: 10px solid #0B1131; */
+}
+
+.autoskola__content__description{
+    max-width: 45%;
+    padding: 10px 50px;
+}
+
+.autoskola__content__description_h4{
+    font-size: 28px;
+    color: #0B1131;
+    font-family: 'Noto Sans', sans-serif;
+    border-bottom: 1px solid red;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.autoskola__content__description__p{
+    color: #0B1131;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+
+
+/* ------------------- */
 .autoskola__row{
     display: block;
     display: flex;
@@ -11,6 +130,12 @@
     align-items: flex-start;
     padding: 50px;
     gap: 10vw;
+    transition: .5s;
+}
+
+.autoskola__row:hover .autoskola__image{
+    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 .autoskola__col{
@@ -46,10 +171,23 @@
 }
 
 .autoskola__header{
+    position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     color: rgb(104, 103, 103);
     margin-bottom: 30px;
+    overflow: visible;
+}
+
+.autoskola__header::before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 25%;
+    height: 50%;
+    width: 5px;
+    border-radius: 10px;
+    background: #0B2259;
 }
 
 .autoskola__description{
@@ -59,7 +197,70 @@
     max-width: 450px;
 }
 
+@media screen and (max-width: 900px) {
+    .autoskola__content{
+        flex-direction: column;
+    }
+
+    .autoskola__content > *{
+        width: 100%;
+        max-width: unset;
+    }
+
+    .autoskola__content__img{
+        max-height: 100%;
+        max-width: 50%;
+    }
+
+    .autoskola__content__images{
+        width: 95% !important;
+        margin: 20px auto;
+        max-height: 350px;
+    }
+
+    .autoskola__content__img:nth-of-type(1){
+        left: 0px;
+        width: 50%;
+    }
+
+    .autoskola__content__img:nth-of-type(2){
+        right: 0px;
+        width: 50%;
+        left: unset;
+    }
+}
+
+
 @media screen and (max-width: 700px) {
+   .autoskola__header__description{
+       font-size: 2cm;
+   }
+   
+    .autoskola__content{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .autoskola__header{
+        margin-bottom: 50px;
+    }
+
+    .autoskola__content > div{
+        width: 100%;
+        max-width: unset;
+        margin: 0px;
+        padding: 15px;
+    }
+
+    .autoskola__content__description_h4{
+        margin: 10px auto 20px auto;
+    }
+
+    .autoskola__content__images{
+        max-height: 250px;
+    }
+
+   /* ------- */
     .autoskola__row{
         flex-direction: column;
         gap: 5px;
@@ -97,5 +298,18 @@
         text-align: justify;
         word-break: break-all;
         -ms-word-break: break-all;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .autoskola__content__images{
+        height: fit-content;
+        max-height: unset;
+    }
+    .autoskola__content__img{
+        position: relative !important;
+        width: 100% !important;
+        max-width: unset;
+        max-height: unset;
     }
 }

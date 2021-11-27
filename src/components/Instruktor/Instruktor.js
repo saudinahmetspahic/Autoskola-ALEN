@@ -14,7 +14,7 @@ function Instruktor() {
             <div className="instruktor__col">
                 <p className="instruktor__header__small">Instruktor</p>
                 <p className="instruktor__header">Alen Ahmetspahić</p>
-                <p className="instruktor__description">Vrši obuku kandidata za B kategoriju vozačke dozvole.</p>
+                <p className="instruktor__description">Stručnost i profesionalnost istruktora autoškole ALEN će Vam omogućiti savladavanje vozačke vještine za bezbijedno učestvovanje u saobraćaju. Obuka se vrši na idividualan način usmjeren prema kandidatu i njegovim potrebama i mogućnostima.</p>
                 <div className="instruktor__info">
                     <p className="instruktor__info__p"><AiFillPhone className="instruktor__icon" /> +387 (0)61 433 378</p>
                     <p className="instruktor__info__p"><AiFillMail className="instruktor__icon" /> alen@autoskola.ba</p>

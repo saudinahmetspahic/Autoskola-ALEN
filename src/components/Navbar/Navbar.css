@@ -44,9 +44,6 @@
     color: rgb(236, 233, 14);
 }
 
-.first__section__col__p{
-    line-height: 10px;
-}
 
 .first__section__soc__icon{
     cursor: pointer;
@@ -78,8 +75,8 @@
     object-fit: contain;
     flex: 1;
     /* border-radius: 10px 50%; */
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .navbar__stavka__image{

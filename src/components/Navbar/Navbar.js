@@ -6,7 +6,7 @@ import { ImLocation } from 'react-icons/im'
 import { ImFacebook } from 'react-icons/im'
 import { ImInstagram } from 'react-icons/im'
 
-import logo from '../../images/logo.jpg';
+import logo from '../../images/autoskola_logo.jpg';
 import { ImMenu3 } from 'react-icons/im'
 
 function Navbar() {
@@ -44,7 +44,7 @@ function Navbar() {
                     </div>
                     <div className="first__section__col">
                         <AiFillMail className="first__section__col__icon" />
-                        <p className="first__section__col__p">alen@autoskola.ba</p>
+                        <p className="first__section__col__p">autoskolaalen20@hotmail.com | alenahmetspahic009@gmail.com</p>
                     </div>
                 </div>
                 <div className="first__section">

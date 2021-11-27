@@ -2,7 +2,7 @@ import React from 'react'
 import './Pocetna.css'
 import { Link } from 'react-router-dom'
 import { AiFillPhone } from 'react-icons/ai'
-import { AiTwotoneMail } from 'react-icons/ai'
+import { HiMail } from 'react-icons/hi'
 import { ImLocation } from 'react-icons/im'
 import { ImFacebook } from 'react-icons/im'
 import { ImInstagram } from 'react-icons/im'
@@ -32,7 +32,7 @@ function Pocetna() {
                 <div className="pocetna__section__content pocetna__section__content--dark--bg">
                     <p className="pocetna__section__content__p">AUTOŠKOLA ALEN</p>
                     <p className="pocetna__section__content__p">Prijavite se na brz i jednostavan način</p>
-                    <button className="btn pocetna__section__content__btn">Prijavi se</button>
+                    <Link to="/autoskola" className="btn pocetna__section__content__btn">Prijavi se</Link>
                 </div>
             </section>
             <section className="pocetna__section">
@@ -62,10 +62,6 @@ function Pocetna() {
                         <div className="pocetna__section__content__col">
                             <img src={about_us_1} alt="" className="about__us__image__1" />
                             <img src={about_us_2} alt="" className="about__us__image__2" />
-                            {/* <img className="about__us__image" src={about_us} alt="" />
-                            <img className="about__us__d__image" src={about_us_d} alt="" />
-                            <img className="about__us__d__image" src={about_us_d} alt="" />
-                            <img className="about__us__d__image" src={about_us_d} alt="" /> */}
                         </div>
                         <div className="pocetna__section__content__col pocetna__section__content__col--left">
                             <p className="about__us__header__1">Kreni na putovanje sa nama</p>
@@ -98,13 +94,14 @@ function Pocetna() {
                         </div>
                         <div className="pocetna__section__content__col">
                             <ContactSection title="Kontakt informacije">
-                                <p className="align__info"><AiFillPhone /> +387 (0)61 433 378</p>
-                                <p className="align__info"><AiTwotoneMail /> alen@autoskola.ba</p>
+                                <p className="align__info"><AiFillPhone className="icon" /> +387 (0)61 433 378</p>
+                                <p className="align__info"><HiMail className="icon" /> autoskolaalen20@hotmail.com</p>
+                                <p className="align__info"><HiMail className="icon" /> alenahmetspahic009@gmail.com</p>
                             </ContactSection>
                         </div>
                         <div className="pocetna__section__content__col">
                             <ContactSection title="Lokacija">
-                                <p className="align__info"><ImLocation />Zenica, Sarajevska 75</p>
+                                <p className="align__info"><ImLocation className="icon" />Zenica, Sarajevska 75</p>
                             </ContactSection>
                         </div>
                         <div className="pocetna__section__content__col">

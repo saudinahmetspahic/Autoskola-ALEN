@@ -250,6 +250,10 @@
     padding: 20px;
 }
 
+.icon{
+    overflow: visible !important;
+}
+
 .soc__networks{
     display: flex;
     gap: 2px;
