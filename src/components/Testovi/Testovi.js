@@ -33,7 +33,7 @@ function Testovi() {
                     <button onClick={() => setDoc(file_3)} className="btn-tab">Teorija - Oblast III</button>
                 </div>
                 {isMobile ||
-                    <iframe className="testovi_pdf_files_iframe" src={doc} frameborder="0"></iframe>
+                    <iframe title='teorija' className="testovi_pdf_files_iframe" src={doc} frameborder="0"></iframe>
                 }
                 {isMobile &&
                     <p>download</p>
