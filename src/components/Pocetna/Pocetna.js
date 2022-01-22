@@ -10,7 +10,7 @@ import { AiOutlineCopyrightCircle } from 'react-icons/ai'
 
 import ContactSection from '../ContactSection/ContactSection'
 
-import main from '../../images/main.jpeg'
+import main from '../../images/main_1.jpg'
 import pc from '../../images/pc.png'
 import hands from '../../images/hands.png'
 import licence from '../../images/licence.png'
