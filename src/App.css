@@ -34,6 +34,16 @@ a{
     background-color: rgb(37, 165, 154);
 }
 
+.w-100{
+  width: 100%;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 
 /* --------- */
 /* Customize the label (the container) */

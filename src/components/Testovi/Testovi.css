@@ -1,10 +1,56 @@
 .testovi{
     height: calc(100vh - 150px);
+    overflow: scroll;
     width: 100%;
+    background: white;
 }
 
 .testovi__frame{
     border: 0px;
     width: 100%;
     height: 100%;
+}
+
+.testovi_pdf_files{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0px 100px 0px;
+}
+
+.testovi_pdf_files_description{
+    padding: 15px;
+    background: #2196F3;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testvi_pdf_files__bts{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.btn-tab{
+    background: transparent;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: 0px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.btn-tab:hover{
+    background: #2196F3;
+    color: white;
+}
+
+.testovi_pdf_files_iframe{
+    width: 80%;
+    min-width: 400px; 
+    height: 700px;
+    margin: auto;
 }

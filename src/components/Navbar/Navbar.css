@@ -30,11 +30,12 @@
 
 .first__section__col{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-right: 20px;
     gap: 10px;
 }
+
 
 .first__section__col:first-of-type{
     border-right: 1px solid gray;
@@ -70,8 +71,8 @@
 }
 
 .navbar__logo{
-    max-width: 100px;
-    max-height: 90px;
+    max-width: 130px;
+    max-height: 120px;
     object-fit: contain;
     flex: 1;
     /* border-radius: 10px 50%; */
@@ -227,6 +228,20 @@
         margin-right: 0px;
     }
 
+  
+}
 
-    
+@media screen and (max-width: 580px) {
+    .first__section__col__p{
+        font-size: .2cm;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .first__section__col{
+        padding-right: 5px;
+        flex: 1;
+    }
+
+
 }
