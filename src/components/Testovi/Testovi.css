@@ -54,3 +54,20 @@
     height: 700px;
     margin: auto;
 }
+
+.testovi_pdf_files_select{
+    color: #2196F3;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+
+.testvi_pdf_files_download_btn{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 1px solid #2196F3;
+    padding: 10px 20px;
+    color: #2196F3;
+    text-shadow: 0px 0px 0.3px black;
+}
