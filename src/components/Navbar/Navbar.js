@@ -6,7 +6,7 @@ import { ImLocation } from 'react-icons/im'
 import { ImFacebook } from 'react-icons/im'
 import { ImInstagram } from 'react-icons/im'
 
-import logo from '../../images/logo.png';
+import logo from '../../images/logo.jpg';
 import { ImMenu3 } from 'react-icons/im'
 
 function Navbar() {
@@ -40,7 +40,7 @@ function Navbar() {
                 <div className="first__section">
                     <div className="first__section__col">
                         <ImLocation className="first__section__col__icon" />
-                        <p className="first__section__col__p">Vranduk, Zenica</p>
+                        <p className="first__section__col__p">Sarajevska 75, Zenica</p>
                     </div>
                     <div className="first__section__col">
                         <AiFillMail className="first__section__col__icon" />
